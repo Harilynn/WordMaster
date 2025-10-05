@@ -1,0 +1,161 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Word Master ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Glitters Background -->
+    <div class="glitters-bg">
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+    </div>
+    
+    <!-- Bubbles Background -->
+    <div class="bubbles-bg">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    
+    <!-- Floating Icons -->
+    <div class="floating-icons">
+        <i class="fas fa-star floating-icon"></i>
+        <i class="fas fa-gem floating-icon"></i>
+        <i class="fas fa-magic floating-icon"></i>
+        <i class="fas fa-crown floating-icon"></i>
+        <i class="fas fa-heart floating-icon"></i>
+        <i class="fas fa-bolt floating-icon"></i>
+    </div>
+    
+    <!-- Glowing Icons -->
+    <div class="glowing-icons">
+        <i class="fas fa-sparkles glow-icon"></i>
+        <i class="fas fa-star glow-icon"></i>
+        <i class="fas fa-sun glow-icon"></i>
+        <i class="fas fa-gem glow-icon"></i>
+        <i class="fas fa-diamond glow-icon"></i>
+        <i class="fas fa-magic glow-icon"></i>
+        <i class="fas fa-crown glow-icon"></i>
+        <i class="fas fa-fire glow-icon"></i>
+    </div>
+    
+    <!-- Success Stickers Container -->
+    <div class="stickers-container" id="stickersContainer"></div>
+    
+    <!-- Main Game Container -->
+    <div class="game-container">
+        <div class="card">
+            <!-- Glittery Background -->
+            <div class="glitter-bg"></div>
+            
+            <!-- Game Header -->
+            <div class="game-header">
+                <h1><i class="fas fa-gamepad"></i> Word Master</h1>
+                <div class="progress-container">
+                    <div class="progress-label">Progress</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="progress-text" id="progressText">0%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dynamic Hint Section -->
+            <div class="hint-section">
+                <div class="hint-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="hint-text" id="hintText">🎯 A powerful programming language</div>
+            </div>
+            
+            <!-- Word Display -->
+            <div class="word-display">
+                <p id="displayWord"></p>
+            </div>
+            
+            <!-- Guessed Letters -->
+            <div class="guessed-letters">
+                <p>Guessed Letters: <span id="guessedLetters">None yet</span></p>
+            </div>
+            
+            <!-- Input Section -->
+            <div class="input-section">
+                <label for="letter-input">Enter a letter:</label>
+                <div class="input-container">
+                    <input type="text" 
+                           maxlength="1" 
+                           id="letter-input"
+                           placeholder="?">
+                    <button class="submit-btn" onclick="guessLetter()">
+                        <span class="btn-text">SUBMIT</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Game Stats -->
+            <div class="game-stats">
+                <div class="stat">
+                    <i class="fas fa-location-arrow"></i>
+                    <span>Attempts: <span id="attempts">0</span></span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Correct: <span id="correctGuesses">0</span></span>
+                </div>
+            </div>
+            
+            <!-- Play Again Button (hidden initially) -->
+            <div class="play-again-container" id="playAgainContainer" style="display: none;">
+                <button class="play-again-btn" onclick="startNewGame()">
+                    <i class="fas fa-redo"></i>
+                    <span>Play Again</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
